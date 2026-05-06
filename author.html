@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Об авторе</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#FDF6EC,#f3ece1);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.author-card{
+    width:950px;
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(14px);
+    border-radius:30px;
+    padding:40px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.12);
+
+    display:flex;
+    align-items:center;
+    gap:40px;
+
+    animation:fade 1s ease;
+}
+
+.author-image img{
+    width:420px;
+    height:260px;
+    object-fit:cover;
+    border-radius:22px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+}
+
+.author-text{
+    flex:1;
+}
+
+h2{
+    margin-top:0;
+    font-size:42px;
+    color:#222;
+    margin-bottom:25px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.8;
+    color:#444;
+    margin-bottom:18px;
+}
+
+.highlight{
+    font-weight:bold;
+    color:#111;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="author-card">
+
+<div class="author-image">
+    <img src="avtori.png" alt="Авторы сайта">
+</div>
+
+<div class="author-text">
+
+<h2>👨‍💻 Об авторе</h2>
+
+<p>
+Автор сайта — <span class="highlight">Тишков Евгений</span> и 
+<span class="highlight">Менщиков Илья</span>, студенты группы 2525.
+</p>
+
+<p>
+Главная цель проекта — помочь пользователям быстро и удобно сравнивать мобильные тарифы и выбирать наиболее подходящий вариант.
+</p>
+
+</div>
+
+</div>
+
+</body>
+</html>

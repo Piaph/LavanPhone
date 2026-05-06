@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>О сайте</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#FDF6EC,#f3ece1);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.about-box{
+    width:700px;
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(12px);
+    border-radius:28px;
+    padding:40px;
+    box-shadow:0 10px 35px rgba(0,0,0,0.12);
+    animation:fade 1s ease;
+}
+
+h2{
+    margin-top:0;
+    font-size:38px;
+    color:#222;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.8;
+    color:#444;
+    text-align:center;
+}
+
+.highlight{
+    color:#111;
+    font-weight:bold;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="about-box">
+
+<h2>📱 О ЛаванPhone</h2>
+
+<p>
+<span class="highlight">ЛаванPhone</span> — это современный сайт для удобного сравнения мобильных тарифов от популярных операторов связи России.
+<br><br>
+Мы собираем актуальную информацию о пакетах интернета, звонках и ценах, чтобы помочь пользователям быстро выбрать лучший тариф под свои задачи.
+<br><br>
+Минималистичный дизайн, удобная навигация и простота использования делают сервис быстрым и понятным для каждого.
+</p>
+
+</div>
+
+</body>
+</html>
