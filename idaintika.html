@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Айдентика — ЛаванPhone</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+
+    background:linear-gradient(135deg,#fdf6ec,#f5efe4);
+
+    padding:40px;
+}
+
+/* КОНТЕЙНЕР */
+
+.identity-box{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    background:rgba(255,255,255,0.72);
+
+    backdrop-filter:blur(14px);
+
+    border-radius:30px;
+
+    padding:35px;
+
+    box-shadow:0 10px 35px rgba(0,0,0,0.12);
+}
+
+/* ЗАГОЛОВОК */
+
+h1{
+
+    text-align:center;
+
+    font-size:42px;
+
+    color:#111;
+
+    margin-bottom:12px;
+}
+
+/* ПОДЗАГОЛОВОК */
+
+.subtitle{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:18px;
+
+    margin-bottom:45px;
+}
+
+/* КАРТОЧКИ */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:28px;
+}
+
+/* КАРТОЧКА */
+
+.card{
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:22px;
+
+    box-shadow:0 8px 24px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* КАРТИНКИ */
+
+.card img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    margin-bottom:18px;
+}
+
+/* ТЕКСТ */
+
+.card h2{
+
+    color:#111;
+
+    margin-bottom:12px;
+
+    font-size:28px;
+}
+
+.card p{
+
+    color:#666;
+
+    line-height:1.7;
+
+    margin-bottom:22px;
+
+    font-size:16px;
+}
+
+/* КНОПКА */
+
+.download-btn{
+
+    border:none;
+
+    background:#111;
+
+    color:white;
+
+    padding:14px 22px;
+
+    border-radius:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    font-size:15px;
+}
+
+.download-btn:hover{
+
+    transform:scale(1.05);
+
+    background:#222;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="identity-box">
+
+<h1>🎨 Айдентика ЛаванPhone</h1>
+
+<div class="subtitle">
+Фирменные элементы бренда
+</div>
+
+<div class="cards">
+
+<!-- ЛОГО -->
+
+<div class="card">
+
+<img src="logo.png" alt="Логотип">
+
+<h2>Логотип</h2>
+
+<p>
+Основной логотип ЛаванPhone для сайта и социальных сетей.
+</p>
+
+<button
+class="download-btn"
+onclick="downloadFile('logo.png')"
+>
+⬇ Скачать логотип
+</button>
+
+</div>
+
+<!-- БАННЕР -->
+
+<div class="card">
+
+<img src="baner.png" alt="Баннер">
+
+<h2>Баннер</h2>
+
+<p>
+Фирменная обложка сообщества в минималистичном tech-стиле.
+</p>
+
+<button
+class="download-btn"
+onclick="downloadFile('baner.png')"
+>
+⬇ Скачать баннер
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function downloadFile(fileName){
+
+    const link =
+    document.createElement("a");
+
+    link.href = fileName;
+
+    link.download = fileName;
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    document.body.removeChild(link);
+}
+
+</script>
+
+</body>
+
+</html>

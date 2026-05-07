@@ -48,9 +48,13 @@ body{
     align-items:center;
 }
 
-/* ЗАГОЛОВОК */
+/* ЛОГО */
 
 .logo{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
 
     font-size:32px;
 
@@ -61,13 +65,16 @@ body{
     margin-bottom:4px;
 }
 
-/* ПОДЗАГОЛОВОК */
+/* КАРТИНКА */
 
-.subtitle{
+.logo-img{
 
-    font-size:13px;
+    width:42px;
+    height:42px;
 
-    color:#666;
+    object-fit:contain;
+
+    border-radius:12px;
 }
 
 /* БЕГУЩАЯ СТРОКА */
@@ -90,11 +97,22 @@ body{
     align-items:center;
 }
 
+/* ЛЕНТА */
+
+.marquee-track{
+
+    display:flex;
+
+    width:max-content;
+
+    animation:scroll 20s linear infinite;
+}
+
 /* ТЕКСТ */
 
 .marquee{
 
-    display:inline-block;
+    display:flex;
 
     white-space:nowrap;
 
@@ -103,28 +121,25 @@ body{
     font-size:11px;
 
     font-weight:bold;
-
-    padding-left:100%;
-
-    animation:marquee 18s linear infinite;
 }
 
 /* ОТСТУПЫ */
 
 .marquee span{
     margin-right:70px;
+    padding-left:20px;
 }
 
-/* АНИМАЦИЯ */
+/* БЕСКОНЕЧНАЯ АНИМАЦИЯ */
 
-@keyframes marquee{
+@keyframes scroll{
 
-    0%{
+    from{
         transform:translateX(0);
     }
 
-    100%{
-        transform:translateX(-100%);
+    to{
+        transform:translateX(-50%);
     }
 }
 
@@ -137,26 +152,48 @@ body{
 <div class="header">
 
     <div class="logo">
-        📱 ЛаванPhone
+
+        <img src="logo.png" class="logo-img">
+
+        <span>ЛаванPhone</span>
+
     </div>
 
     <div class="marquee-box">
 
-        <div class="marquee">
+        <div class="marquee-track">
 
-            <span>🔥 Лучшие тарифы 2026</span>
+            <!-- ПЕРВАЯ КОПИЯ -->
 
-            <span>📶 МТС • Билайн • Tele2 • МегаФон</span>
+            <div class="marquee">
 
-            <span>💰 Быстрое и удобное сравнение</span>
+                <span>🔥 Лучшие тарифы 2026</span>
 
-            <span>⚡ Современный каталог мобильных операторов</span>
+                <span>📶 МТС • Билайн • Tele2 • МегаФон</span>
 
-            <span>🚀 ЛаванPhone</span>
+                <span>💰 Быстрое и удобное сравнение</span>
 
-            <span>🔥 Лучшие тарифы 2026</span>
+                <span>⚡ Современный каталог мобильных операторов</span>
 
-            <span>📶 МТС • Билайн • Tele2 • МегаФон</span>
+                <span>🚀 ЛаванPhone</span>
+
+            </div>
+
+            <!-- ВТОРАЯ КОПИЯ -->
+
+            <div class="marquee">
+
+                <span>🔥 Лучшие тарифы 2026</span>
+
+                <span>📶 МТС • Билайн • Tele2 • МегаФон</span>
+
+                <span>💰 Быстрое и удобное сравнение</span>
+
+                <span>⚡ Современный каталог мобильных операторов</span>
+
+                <span>🚀 ЛаванPhone</span>
+
+            </div>
 
         </div>
 
